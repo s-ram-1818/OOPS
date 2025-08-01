@@ -1,0 +1,37 @@
+OOP->OOP is a way of writing programs using objects and classes to represent real-world things. It helps make code more organized, reusable, and easier to understand.
+Class:Class is a user-defined data type which defines its properties and its functions.It specifies the characteristics (properties) and actions (methods) that objects of that class will have.
+Attributes: These are the variables or data members connected to a class
+Methods: The functions that define a class's behavior are called methods
+Object:An object is an instance of a class that contains data (variables) and functions (methods) to work on that data.It represents a real-world entity like a car, person, or book.
+
+Static Memory Allocation:
+A static object is created at compile time and stored in the stack memory. ->It is automatically destroyed when it goes out of scope.Memory used for local variables,Function calls,Small Size,speed->fast
+
+Dynamic MEmory Allocation:
+A dynamic object is created at run-time using the new keyword and stored in heap memory. You must manually delete it using delete.->Dynamic memory allocation (new / malloc),Objects with manually controlled lifetime,larger size,speed->slow
+
+
+class Car {
+  public:
+    void start() {
+      cout << "Car started\n";
+    }
+};
+
+int main() {
+  Car c1;     // static object
+  c1.start(); // accessing member function
+
+ Car* c1 = new Car();  // dynamic object
+  c1->start();          // using arrow operator ->
+  delete c1;            // manually freeing memory
+
+
+
+  return 0;
+}
+
+Compile time:Compile time is the time when your code is converted from high-level language (like C++/Java) to machine code (binary) by the compiler.
+Activities->Syntax checking,Type checking,Variable declaration errors,Function overloading resolution,Code optimization
+Runtime : Run time is the time when your program is actually executed on the system after successful compilation.
+Activities->Actual logic execution,Memory allocation (heap),Input/output handling,Runtime errors
