@@ -112,7 +112,7 @@ It allows a single function, method, or operator to behave differently based on 
 1. Compile Time Polymorphism (Static)->implemented at compile time
 a) Function overloading:Method overloading is a technique which allows youto have more than one function with the same function name but with different functionality.
 Possible by
-1. The return type of the overloaded function.
+1. The return type of the overloaded function.but not only return type diff atleast one paramter type diff.
 2. The type of the parameters passed to the function.
 3. The number of parameters passed to the function.
 
