@@ -283,6 +283,24 @@ public:
 //override keyword is optional but useful to	Catches errors due to typos or wrong parameters.
 };
 
+● FINAL KEYWORD
+| Feature / Context   | Java                                       | C++ (C++11 and later)                           |
+| ------------------- | ------------------------------------------ | ----------------------------------------------- |
+| **Variable**        | `final` variable cannot be reassigned      | Not applicable (`const` is used instead)        |
+| **Method**          | Prevents method overriding in subclass     | Prevents overriding of virtual functions        |
+| **Class**           | Prevents inheritance (no subclass allowed) | Prevents inheritance (no derived class allowed) |
+| **Syntax (Method)** | `final void show() { }`                    | `virtual void show() final;`                    |
+| **Syntax (Class)**  | `final class A { }`                        | `class A final { };`                            |
+
+● SUPER KEYWORD
+| Feature               | Java (`super`)   | C++ (No `super`)             |
+| --------------------- | ---------------- | ---------------------------- |
+| Call base method      | `super.method()` | `Base::method()`             |
+| Call base constructor | `super()`        | `Derived(): Base() {}`       |
+| Access base variable  | `super.var`      | `Base::var`                  |
+| Keyword exists?       | ✅ Yes            | ❌ No (`Base::` used instead) |
+
+
 
 
 
