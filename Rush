@@ -90,8 +90,19 @@ ACCESS Modifiers TABLES
 | public       | ✅ Yes                 | ✅ Yes                     | ✅ Yes                     |
 +--------------+------------------------+-----------------------------+----------------------------+
 3) ABSTRACTION
-Abstraction is the process of hiding internal details and showing only the essential features of an object.
-Abstract Class->
+| **Concept**             | **Definition**                                                              | **Java Example**                                          | **C++ Example**                                                              |
+| ----------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| **Abstraction**         | Hiding internal details and showing only necessary features                 | `abstract class Shape { abstract void draw(); }`          | `class Shape { virtual void draw() = 0; };`                                  |
+| **Purpose**             | Reduce complexity, enhance maintainability, increase security               | `Animal obj = new Dog(); obj.makeSound();`                | `Animal* a = new Dog(); a->makeSound();`                                     |
+| **Abstract Class**      | A class that can have abstract and concrete methods. Cannot be instantiated | `abstract class Animal { abstract void sound(); }`        | `class Animal { virtual void sound() = 0; };`                                |
+| **Abstract Method**     | A method without a body, must be overridden in subclass                     | `abstract void draw();`                                   | `virtual void draw() = 0;`                                                   |
+| **Interface**           | 100% abstract type (only abstract methods, no implementation)               | `interface Vehicle { void drive(); }`                     | *Not supported directly; use abstract class with all pure virtual functions* |
+| **Object Creation**     | Cannot create object of abstract class directly                             | `Animal a = new Dog();`                                   | `Animal* a = new Dog();`                                                     |
+| **Polymorphism Use**    | Abstract class/interface enables runtime polymorphism                       | `Animal a = new Dog(); a.makeSound();`                    | `Animal* a = new Dog(); a->makeSound();`                                     |
+| **Partial Abstraction** | Possible using abstract class                                               | `abstract class A { void show(); abstract void hide(); }` | `class A { void show(); virtual void hide() = 0; };`                         |
+| **Full Abstraction**    | Achieved using interfaces                                                   | `interface Printable { void print(); }`                   | `class A { virtual void print() = 0; };`                                     |
+| **Real-Life Example**   | ATM hides internal code, shows options only                                 | Pressing ATM buttons without knowing backend logic        | Using a remote without knowing internal circuit                              |
+
 
 
 4) POLYMORPHISM
@@ -260,6 +271,17 @@ void showLength(Box b) {
 ● Aggregation : 
 It is a process in which one class defines another class as any entity reference. It is another way to reuse the class. It is a form of association that represents the HAS-A relationship.
 
+● VIRTUAL FUNCTION
+ A virtual function is a member function in a base class that you expect to override in derived classes.It is declared using the virtual keyword and supports runtime polymorphism via function overriding.
+class Base {
+public:
+    virtual void show(); // virtual function
+};
+class Derived : public Base {
+public:
+    void show() override; // override base class version
+//override keyword is optional but useful to	Catches errors due to typos or wrong parameters.
+};
 
 
 
