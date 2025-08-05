@@ -304,8 +304,29 @@ public:
 
 
 
+IS-A relationship->Represents "is a type of" relationship.  Implementation: Inheritance (extends / :).Example: Dog IS-A Animal.
+class Animal {
+public:
+    void eat() { cout << "Eating...\n"; }
+};
+class Dog : public Animal { // Dog IS-A Animal
+public:
+    void bark() { cout << "Barking...\n"; }
+};
 
-
+HAS-A Relationship->Represents "has a" or "contains" relationship , Implementation: Composition / Aggregation (object as member). Example: Car HAS-A Engine.
+class Engine {
+public:
+    void start() { cout << "Engine starting...\n"; }
+};
+class Car { // Car HAS-A Engine
+    Engine engine;
+public:
+    void startCar() {
+        engine.start();
+        cout << "Car started!\n";
+    }
+};
 
 
 
