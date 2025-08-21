@@ -328,6 +328,13 @@ public:
     }
 };
 
+| Aspect       | Aggregation                   | Composition                       |
+| ------------ | ----------------------------- | --------------------------------- |
+| Relationship | Weak *has-a*                  | Strong *has-a*                    |
+| Lifecycle    | Child can exist independently | Child cannot exist without parent |
+| UML Symbol   | Hollow diamond                | Filled diamond                    |
+| Example      | Department–Professor          | House–Room                        |
+
 
 
 
