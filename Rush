@@ -49,7 +49,7 @@ public:
         cout << "Eating..." << endl;
     }
 };
-
+// public -> It controls how the members of the base class (Animal) are inherited into the derived class (Dog).
 class Dog : public Animal {  // Inheriting Animal class
 public:
     void bark() {
