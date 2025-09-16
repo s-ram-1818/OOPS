@@ -1,8 +1,11 @@
-OOP->OOP is a way of writing programs using objects and classes to represent real-world things. It helps make code more organized, reusable, and easier to understand.
+OOP->OOP is a way of writing programs using objects and classes to represent real-world things. It helps make code more organized, reusable, and easier to understand. cpp,java
+procedural -> A programming paradigm where the program is divided into functions/procedures, and data is separate from those functions. The focus is on step-by-step execution of instructions. c,pascal
 Class:Class is a user-defined data type which defines its properties and its functions.It specifies the characteristics (properties) and actions (methods) that objects of that class will have.
 Attributes: These are the variables or data members connected to a class
 Methods: The functions that define a class's behavior are called methods
 Object:An object is an instance of a class that contains data (variables) and functions (methods) to work on that data.It represents a real-world entity like a car, person, or book.
+
+
 
 Static Memory Allocation:
 A static object is created at compile time and stored in the stack memory. ->It is automatically destroyed when it goes out of scope.Memory used for local variables,Function calls,Small Size,speed->fast
