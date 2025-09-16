@@ -150,7 +150,7 @@ int main() {
 
 
 2. Runtime Polymorphism (Dynamic)->implemented at runtime
-method overriding->
+method overriding-> Child class provides a new implementation of a method already defined in the parent class.
 It is achieved using virtual functions and inheritance.
 class Animal {
 public:
