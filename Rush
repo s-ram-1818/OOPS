@@ -80,6 +80,48 @@ int main() {
 | `protected`       | `protected` in child | `protected` in child    | `private` in child    |
 | `private`         | Not Inherited        | Not Inherited           | Not Inherited         |
 
+
+"The diamond problem occurs in multiple inheritance when two parent classes inherit from the same base class, and then a child class inherits from both parents. This leads to ambiguity because the child has two copies of the base class. 
+For example, if both B and C inherit from A, and D inherits from both B and C, then D contains two copies of A. To resolve this, C++ provides virtual inheritance, which ensures that only one copy of the base class is inherited, thus avoiding ambiguity."
+#include <iostream>
+using namespace std;
+
+class A {
+public:
+    void show() {
+        cout << "Class A" << endl;
+    }
+};
+
+class B : public A { };
+class C : public A { };
+
+class D : public B, public C { };
+
+int main() {
+    D obj;
+    // obj.show(); // ❌ ERROR: Ambiguous
+    obj.B::show(); // ✅ resolve ambiguity
+    obj.C::show(); // ✅ resolve ambiguity
+}
+
+We solve this using virtual inheritance, which ensures that only one copy of the base class is shared among all derived classes.
+
+class A {
+public:
+    void show() { }
+};
+
+class B : virtual public A { };
+class C : virtual public A { };
+class D : public B, public C { };
+
+int main() {
+    D obj;
+    obj.show();   // ✅ No ambiguity, single copy of A
+}
+
+
 DATA HIDING
 
 2) ENCAPSULATION
