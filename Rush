@@ -109,7 +109,7 @@ ACCESS Modifiers TABLES
 Polymorphism means "many forms".
 It allows a single function, method, or operator to behave differently based on the context (i.e., input types or object types).
 
-1. Compile Time Polymorphism (Static)->implemented at compile time
+1. Compile Time Polymorphism (Static)->implemented at compile time,Method to perform polymorphism that is resolved during compilation achived by->
 a) Function overloading:Method overloading is a technique which allows youto have more than one function with the same function name but with different functionality.
 Possible by
 1. The return type of the overloaded function.but not only return type diff atleast one paramter type diff.
