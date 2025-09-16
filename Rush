@@ -150,6 +150,7 @@ int main() {
 
 
 2. Runtime Polymorphism (Dynamic)->implemented at runtime
+method overriding->
 It is achieved using virtual functions and inheritance.
 class Animal {
 public:
