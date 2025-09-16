@@ -125,6 +125,7 @@ public:
 
 b) operator overloading:Operator overloading allows you to redefine the behavior of operators (+, -, *, etc.) for user-defined types (like classes or structs).
 synatx:
+ex.in C++, the '+' operator works for both integers and strings — that’s operator overloading.
 return_type operator symbol (parameters) {
     // custom code
 }
