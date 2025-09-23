@@ -287,6 +287,23 @@ int main() {
 
 if delete d; is called, if there's no destructor to delete the memory allocated for ptr. So the memory stays allocated — leak!
 }
+Static->
+static is used for memory management. A static variable is shared among all objects and exists throughout the program.
+A static function belongs to the class, can be called without creating an object, and can only access static members.
+class Student {
+    static int count;
+public:
+    Student() { count++; }
+    static int getCount() { return count; }
+};
+int Student::count = 0;
+
+int main() {
+    Student s1, s2;
+    cout << Student::getCount(); // Output: 2
+}
+count is shared among all objects, and getCount() is a static method
+
 
 THIS keyword
 this is a special pointer available inside non-static member functions of a class.It points to the current object — the object which invoked the function.
