@@ -356,13 +356,49 @@ public:
 | **Syntax (Method)** | `final void show() { }`                    | `virtual void show() final;`                    |
 | **Syntax (Class)**  | `final class A { }`                        | `class A final { };`                            |
 
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    virtual void show() final {  // cannot be overridden
+        cout << "Base show()" << endl;
+    }
+};
+
+class Derived : public Base {
+    // void show() override; ❌ Error
+};
+
+
 ● SUPER KEYWORD
 | Feature               | Java (`super`)   | C++ (No `super`)             |
 | --------------------- | ---------------- | ---------------------------- |
 | Call base method      | `super.method()` | `Base::method()`             |
 | Call base constructor | `super()`        | `Derived(): Base() {}`       |
 | Access base variable  | `super.var`      | `Base::var`                  |
-| Keyword exists?       | ✅ Yes            | ❌ No (`Base::` used instead) |
+| Keyword exists?       | ✅ Yes            | ❌ No (`Base::` used instead)|
+
+class Parent {
+public:
+    void display() { cout << "Parent" << endl; }
+};
+
+class Child : public Parent {
+public:
+    void display() { cout << "Child" << endl; }
+
+    void print() {
+        Parent::display(); // acts like 'super' in Java
+    }
+};
+
+int main() {
+    Child c;
+    c.display();   // Child
+    c.print();     // Parent
+}
+
 
 
 
